@@ -27,8 +27,8 @@ public class KeepAllCurios {
             }
         } catch (Exception e) {
             // Avoid crashing if something goes wrong
-            System.err.println("Error when overriding drop rules: " + e);
-            LOGGER.error("Error when overriding drop rules: " + e);
+            System.err.println("Error when overriding DropRulesEvent: " + e);
+            LOGGER.error("Error when overriding DropRulesEvent: " + e);
         }
     }
 
