@@ -21,6 +21,7 @@ public class KeepAllCurios {
             // Check if the drop is happening from a player
             if (event.getCurioHandler().getWearer() instanceof Player) {
                 // Override drop rule
+                // While you can create a predicate to check that that the item is an instance of a curio, testing revealed that if you do this, some curios from some mods will drop from the player upon death - this mod will not be compatible with all mods that use curios.
                 event.addOverride((itemStack) -> true,
                         ICurio.DropRule.ALWAYS_KEEP);
             }
